@@ -140,3 +140,28 @@
 .logo {
     font-size: 400%;
 }
+
+/* styling of form section */
+.drop {
+    margin: auto;
+    width: 65%;
+}
+
+.form {
+    margin: auto;
+}
+
+.space {
+    width: 33%;
+    float: left;
+    flex: 400px;
+}
+
+.btns {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.attach {
+    margin-top: 5%;
+}
