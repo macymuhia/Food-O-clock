@@ -105,3 +105,63 @@
     color: #fff;
     text-align: center;
 }
+
+/* styling of bakground image section in restauran.html*/
+.box {
+    position: relative;
+    display: inline-block;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+.box img {
+    width: 100%;
+    height: 70vh;
+}
+
+.box .text {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 30%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+    color: #fff;
+    width: 95%;
+}
+
+.box .text p {
+    font-size: 400%;
+    font-family: 'Great Vibes', cursive;
+}
+
+.logo {
+    font-size: 400%;
+}
+
+/* styling of form section */
+.drop {
+    margin: auto;
+    width: 65%;
+}
+
+.form {
+    margin: auto;
+}
+
+.space {
+    width: 33%;
+    float: left;
+    flex: 400px;
+}
+
+.btns {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.attach {
+    margin-top: 5%;
+}
