@@ -165,3 +165,11 @@
 .attach {
     margin-top: 5%;
 }
+
+form{
+    width: 100%;
+}
+
+.hide{
+    display: none;
+}
