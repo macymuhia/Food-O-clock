@@ -10,7 +10,6 @@ $(document).ready(function () {
         }
         hidePreloader();
     });
-});
 
 //QRcode section
 function generateQR() {
@@ -20,7 +19,6 @@ function generateQR() {
 
 
     // This will style the form we currently have
-
 
     function food(name, price, total) {
         this.name = name;
@@ -137,4 +135,5 @@ $("#press2").click(function () {
             $('table tfoot td').eq(index).text('Total:' + total);
         }
     })
+});
 });
