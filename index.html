@@ -11,6 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/qrcode.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
 
@@ -70,10 +72,17 @@
                 </div>
         </header>
 
+        <!--- QR code section --->
+        <div class="qr">
+            <input id="myinput" placeholder="Type something">
+            <button onclick="generateQR()">Generate!</button>
+            <div id="qrcode"></div>
+        </div>
+
         <main></main>
 
         <footer></footer>
-        </div>
+    </div>
 </body>
 
 </html>

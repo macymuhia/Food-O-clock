@@ -165,3 +165,8 @@
 .attach {
     margin-top: 5%;
 }
+
+/****** QRcode Styling *****************/
+.qr{
+    text-align: center;
+}

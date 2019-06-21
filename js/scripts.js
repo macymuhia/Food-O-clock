@@ -11,3 +11,9 @@ $(document).ready(function() {
         hidePreloader();
     });
 });
+
+//QRcode section
+function generateQR() {
+    var myinput = $ ("#myinput").val();
+    new QRCode(document.getElementById("qrcode"), myinput);
+}
