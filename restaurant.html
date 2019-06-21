@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
     <title>Chapkula Reservation</title>
 </head>
 
@@ -28,21 +34,23 @@
             </div>
         </div>
     </div>
+
+    <!-- start of form -->
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 drop" id="show14">
                 <div class="drop">
                     <button type="button" class="btn btn-info btns"><i class="fa fa-cutlery"></i>
                         Reservation</button>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 drop" id="show24">
                 <div class="drop">
                     <button type="button" class="btn btn-info btns"><i class="fa fa-cutlery" aria-hidden="true"></i>
                         Takeaway</button>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 drop" id="show34">
                 <div class="drop">
                     <button type="button" class="btn btn-info btns"><i class="fa fa-truck" aria-hidden="true"></i>
                         Delivery</button>
@@ -50,147 +58,186 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row form">
-            <div class="col-md-3 attach">
-                <input class="form-control" type="date" name="" id="">
-            </div>
-            <div class="col-md-3 attach">
-                <input class="form-control" type="time" name="" id="">
-            </div>
-            <div class="col-md-3 attach">
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1 plate</option>
-                    <option>2 plates</option>
-                    <option>3 plates</option>
-                    <option>4 plates</option>
-                    <option>5 plates</option>
-                    <option>6 plates</option>
-                    <option>7 plates</option>
-                    <option>8 plates</option>
-                    <option>9 plates</option>
-                    <option>10plates</option>
-                </select>
-            </div>
-            <div class="col-md-3 attach">
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option>Dumplings</option>
-                    <option>Ma Po Tofu</option>
-                    <option>Chow Mein</option>
-                    <option>Kung Pao Chicken</option>
-                    <option>Sweet and Sour Snail</option>
-                    <option>Fried MAshi</option>
-                    <option>Spinach Nodlees</option>
-                    <option>Stinky Tofu</option>
-                    <option>Spring Rolls</option>
-                    <option>Special Fried Rice</option>
-                </select>
-            </div>
-            <div class="col-md-4 drop">
-                <button type="button" class="btn btn-danger btns"><i class="fa fa-cutlery"></i> Add
-                    Order</button>
-            </div>
-            <div class="col-md-4 drop">
-                <button type="button" class="btn btn-danger btns"><i class="fa fa-cutlery"></i>Make
-                    Reservation</button>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row form">
-            <div class="col-md-6 attach">
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option>Dumplings</option>
-                    <option>Ma Po Tofu</option>
-                    <option>Chow Mein</option>
-                    <option>Kung Pao Chicken</option>
-                    <option>Sweet and Sour Snail</option>
-                    <option>Fried MAshi</option>
-                    <option>Spinach Nodlees</option>
-                    <option>Stinky Tofu</option>
-                    <option>Spring Rolls</option>
-                    <option>Special Fried Rice</option>
-                </select>
-            </div>
-            <div class="col-md-6 attach">
-                <div class="form-group">
-                    <input type="number" class="form-control" id="formGroupExampleInput"
-                        placeholder="How many packages?">
+    <form action="" class="hide 1">
+        <div class="container">
+            <div class="row form">
+                <div class="col-md-3 attach">
+                    <input class="form-control" type="date" name="" id="datepicker">
+                </div>
+                <div class="col-md-3 attach">
+                    <input class="form-control" type="time" name="" id="timepicker">
+                </div>
+                <div class="col-md-3 attach">
+                    <select class="form-control" id="plate">
+                        <option value="1">1 plate</option>
+                        <option value="2">2 plates</option>
+                        <option value="3">3 plates</option>
+                        <option value="4">4 plates</option>
+                        <option value="5">5 plates</option>
+                        <option value="6">6 plates</option>
+                        <option value="7">7 plates</option>
+                        <option value="8">8 plates</option>
+                        <option value="9">9 plates</option>
+                        <option value="10">10plates</option>
+                    </select>
+                </div>
+                <div class="col-md-3 attach">
+                    <select class="form-control" id="food">
+                        <option value="400">Dumplings</option>
+                        <option value="500">Ma Po Tofu</option>
+                        <option value="600">Chow Mein</option>
+                        <option value="700">Kung Pao Chicken</option>
+                        <option value="800">Sweet and Sour Snail</option>
+                        <option value="900">Fried MAshi</option>
+                        <option value="400">Spinach Nodlees</option>
+                        <option value="500">Stinky Tofu</option>
+                        <option value="600">Spring Rolls</option>
+                        <option value="700">Special Fried Rice</option>
+                    </select>
+                </div>
+                <div class="col-md-4 drop">
+                    <button type="button" id="press" class="btn btn-danger btns"><i class="fa fa-cutlery"></i> Add
+                        Order</button>
+                </div>
+                <div class="col-md-4 drop">
+                    <button type="button" id="pressed" class="btn btn-danger btns"><i class="fa fa-cutlery"></i> Make
+                        Reservation</button>
                 </div>
             </div>
-            <div class="col-md-4 drop">
-                <button type="button" class="btn btn-danger btns"><i class="fa fa-cutlery"></i> Add
-                    Order</button>
-            </div>
-            <div class="col-md-4 drop">
-                <button type="button" class="btn btn-danger btns"><i class="fa fa-cutlery"></i>
-                    Checkout</button>
-            </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row form">
-            <div class="col-md-4 attach">
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option>Dumplings</option>
-                    <option>Ma Po Tofu</option>
-                    <option>Chow Mein</option>
-                    <option>Kung Pao Chicken</option>
-                    <option>Sweet and Sour Snail</option>
-                    <option>Fried MAshi</option>
-                    <option>Spinach Nodlees</option>
-                    <option>Stinky Tofu</option>
-                    <option>Spring Rolls</option>
-                    <option>Special Fried Rice</option>
-                </select>
-            </div>
-            <div class="col-md-4 attach">
-                <div class="form-group">
-                    <input type="number" class="form-control" id="formGroupExampleInput"
-                        placeholder="How many packages?">
+    </form>
+    <form action="" class="hide 2">
+        <div class="container">
+            <div class="row form">
+                <div class="col-md-6 attach">
+                    <select class="form-control" id="food1">
+                        <option value="400">Dumplings</option>
+                        <option value="500">Ma Po Tofu</option>
+                        <option value="600">Chow Mein</option>
+                        <option value="700">Kung Pao Chicken</option>
+                        <option value="800">Sweet and Sour Snail</option>
+                        <option value="900">Fried MAshi</option>
+                        <option value="400">Spinach Nodlees</option>
+                        <option value="500">Stinky Tofu</option>
+                        <option value="600">Spring Rolls</option>
+                        <option value="700">Special Fried Rice</option>
+                    </select>
+                </div>
+                <div class="col-md-6 attach">
+                    <select class="form-control" id="plate1">
+                        <option value="1">1 package</option>
+                        <option value="2">2 packages</option>
+                        <option value="3">3 packages</option>
+                        <option value="4">4 packages</option>
+                        <option value="5">5 packages</option>
+                        <option value="6">6 packages</option>
+                        <option value="7">7 packages</option>
+                        <option value="8">8 packages</option>
+                        <option value="9">9 packages</option>
+                        <option value="10">10packages</option>
+                    </select>
+                </div>
+                <div class="col-md-4 drop">
+                    <button type="button" id="press1" class="btn btn-danger btns"><i class="fa fa-cutlery"></i> Add
+                        Order</button>
+                </div>
+                <div class="col-md-4 drop">
+                    <button type="button" id="pressed1" class="btn btn-danger btns"><i class="fa fa-cutlery"></i>
+                        Checkout</button>
                 </div>
             </div>
-            <div class="col-md-4 attach">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Address ?">
+        </div>
+        </div>
+    </form>
+    <form action="" class="hide 3">
+        <div class="container">
+            <div class="row form">
+                <div class="col-md-4 attach">
+                    <select class="form-control" id="food2">
+                        <option value="400">Dumplings</option>
+                        <option value="500">Ma Po Tofu</option>
+                        <option value="600">Chow Mein</option>
+                        <option value="700">Kung Pao Chicken</option>
+                        <option value="800">Sweet and Sour Snail</option>
+                        <option value="900">Fried MAshi</option>
+                        <option value="400">Spinach Nodlees</option>
+                        <option value="500">Stinky Tofu</option>
+                        <option value="600">Spring Rolls</option>
+                        <option value="700">Special Fried Rice</option>
+                    </select>
+                </div>
+                <div class="col-md-4 attach">
+                    <select class="form-control" id="plate2">
+                        <option value="1">1 package</option>
+                        <option value="2">2 packages</option>
+                        <option value="3">3 packages</option>
+                        <option value="4">4 packages</option>
+                        <option value="5">5 packages</option>
+                        <option value="6">6 packages</option>
+                        <option value="7">7 packages</option>
+                        <option value="8">8 packages</option>
+                        <option value="9">9 packages</option>
+                        <option value="10">10packages</option>
+                    </select>
+                </div>
+                <div class="col-md-4 attach">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="" placeholder="Address ?">
+                    </div>
+                </div>
+                <div class="col-md-4 drop">
+                    <button type="button" id="press2" class="btn btn-danger btns"><i class="fa fa-cutlery"></i> Add
+                        Order</button>
+                </div>
+                <div class="col-md-4 drop">
+                    <button type="button" id="pressed2" class="btn btn-danger btns"><i class="fa fa-cutlery"></i>
+                        Checkout</button>
                 </div>
             </div>
-            <div class="col-md-4 drop">
-                <button type="button" class="btn btn-danger btns"><i class="fa fa-cutlery"></i> Add
-                    Order</button>
-            </div>
-            <div class="col-md-4 drop">
-                <button type="button" class="btn btn-danger btns"><i class="fa fa-cutlery"></i>
-                    Checkout</button>
-            </div>
         </div>
-    </div>
-    <div class="container">
+    </form>
+    <div class="container hide 4">
         <div class="row">
             <div class="col-md-12 attach">
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Food</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">No.Orders</th>
-                            <th scope="col">Total</th>
+                            <th>Food</th>
+                            <th>Price</th>
+                            <th>Grand Total</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Chapo</td>
-                            <td>1000</td>
-                            <td>4</td>
-                            <td>4000</td>
+                        <tr id="bill">
+                            <th scope="row"></th>
+                            <td id="food"></td>
+                            <td id="price"></td>
+                            <td id="total"></td>
                         </tr>
                     </tbody>
+                    <tfoot>
+                        <tr id="bills">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>
     </div>
+
+    <!--- QR code section --->
+    <br>
+    <br>
+    <br>
+
+    <div class="qr">
+        <input id="myinput" placeholder="Type something">
+        <button onclick="generateQR()">Generate!</button>
+        <div id="qrcode"></div>
+    </div>
+
 </body>
 
 </html>
