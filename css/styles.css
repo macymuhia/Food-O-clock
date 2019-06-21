@@ -259,7 +259,34 @@ fa {
 #myBtnContainer {
     margin-left: auto;
     margin-right: auto;
-    justify-content: center;
+}
+
+.jumbotron p {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.jumbotron h3 {
+    margin-bottom: 20px;
+}
+
+.nav .btn {
+    margin-left: 160px;
+}
+
+main .row {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.row img {
+    border-radius: 5px;
+}
+
+#myBtnContainer.nav {
+    justify-content: space-around;
+    text-align: center;
 }
 
 .main {
@@ -349,7 +376,7 @@ h1 {
 }
 
 .containers:hover {
-    opacity: 0.9;
+    opacity: 0.7;
 }
 
 .containers:hover .overlay {
