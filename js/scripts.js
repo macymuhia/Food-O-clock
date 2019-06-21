@@ -16,9 +16,6 @@ $(document).ready(function() {
 
         hidePreloader();
 
-    });
-
-    //QRcode section
 
     // This will style the form we currently have
 
@@ -44,6 +41,7 @@ $(document).ready(function() {
 
         $(".4").hide();
 
+
         $(".1").animate({ left: 200, opacity: "show" }, 1500);
 
     })
@@ -60,6 +58,7 @@ $(document).ready(function() {
 
         $(".4").hide();
 
+
         $(".2").animate({ left: 200, opacity: "show" }, 1500);
 
     })
@@ -75,6 +74,7 @@ $(document).ready(function() {
         $(".2").hide();
 
         $(".4").hide();
+
 
         $(".3").animate({ left: 200, opacity: "show" }, 1500);
 
@@ -98,9 +98,10 @@ $(document).ready(function() {
 
         $("table tbody").append(bumaye);
 
-        $("#pressed").last().click(function() {
 
-            $('table thead th').each(function(i) {
+        $("#pressed").last().click(function () {
+            $("#jipe").show();
+            $('table thead th').each(function (i) {
 
                 calculateColumn(i);
 
@@ -123,6 +124,9 @@ $(document).ready(function() {
                 });
 
                 $('table tfoot td').eq(index).text('Total:' + total);
+
+                var you = "Your total value is " + total + "."; 
+                append(you);
 
             }
 
@@ -130,190 +134,89 @@ $(document).ready(function() {
 
     })
 
-    $("#press1").click(function() {
-
-        $(".4").animate({ left: 200, opacity: "show" }, 1500);
-
+    $("#press1").click(function () {
+        $(".4").animate({
+            left: 200,
+            opacity: "show"
+        }, 1500);
         var fName1 = $("#food1 option:selected").text();
-
         var fPrice1 = $("#food1 option:selected").val();
-
         var fPlate1 = $("#plate1 option:selected").val();
-
         var fTotal1 = fPlate1 * fPrice1;
-
         var newFood1 = new food(fName1, fPrice1, fTotal1);
-
         var bumaye1 = '<tr> <td id = "fooda">' + newFood1.name + '</td>' + '<td id = "price">' + newFood1.price + '</td>' + '<td id = "total">' + newFood1.total + '</td></tr>'
-
         $("table tbody").append(bumaye1);
 
-        $("#pressed1").last().click(function() {
-
-            $('table thead th').each(function(i) {
-
+        $("#pressed1").last().click(function () {
+            $("#jipe").show();
+            $('table thead th').each(function (i) {
                 calculateColumn(i);
-
             });
 
             function calculateColumn(index) {
-
                 var total = 0;
-
-                $('table tr').each(function() {
-
+                $('table tr').each(function () {
                     var value = parseInt($('td', this).eq(index).text());
-
                     if (!isNaN(value)) {
-
                         total += value;
-
                     }
-
                 });
-
                 $('table tfoot td').eq(index).text('Total:' + total);
-
+                var you1 = "Your total value is " + total + "."; 
+                append1(you1);
             }
-
         })
-
     });
 
-    $("#press2").click(function() {
-
-        $(".4").animate({ left: 200, opacity: "show" }, 1500);
-
+    $("#press2").click(function () {
+        $(".4").animate({
+            left: 200,
+            opacity: "show"
+        }, 1500);
         var fName2 = $("#food2 option:selected").text();
-
         var fPrice2 = $("#food2 option:selected").val();
-
         var fPlate2 = $("#plate2 option:selected").val();
-
         var fTotal2 = fPlate2 * fPrice2;
-
         var newFood2 = new food(fName2, fPrice2, fTotal2);
-
         var bumaye2 = '<tr> <td id = "fooda">' + newFood2.name + '</td>' + '<td id = "price">' + newFood2.price + '</td>' + '<td id = "total">' + newFood2.total + '</td></tr>'
-
         $("table tbody").append(bumaye2);
-
-        $("#pressed2").last().click(function() {
-
-            $('table thead th').each(function(i) {
-
+        $("#pressed2").last().click(function () {
+            $("#jipe").show();
+            $('table thead th').each(function (i) {
                 calculateColumn(i);
-
             });
 
             function calculateColumn(index) {
-
                 var total = 0;
-
-                $('table tr').each(function() {
-
+                $('table tr').each(function () {
                     var value = parseInt($('td', this).eq(index).text());
-
                     if (!isNaN(value)) {
-
                         total += value;
-
                     }
-
                 });
-
                 $('table tfoot td').eq(index).text('Total:' + total);
-
+                var you2 = "Your total value is " + total + "."; 
+                append2(you2);
             }
-
         })
-
     });
-
 });
 
+//QRcode section
 function generateQR() {
-
-    var myinput = $("#myinput").val();
-
+    var myinput = $("#myinput").text();
     new QRCode(document.getElementById("qrcode"), myinput);
-
 }
 
-filterSelection("all")
-
-function filterSelection(c) {
-
-    var x, i;
-
-    x = document.getElementsByClassName("column");
-
-    if (c == "all") c = "";
-
-    for (i = 0; i < x.length; i++) {
-
-        w3RemoveClass(x[i], "show");
-
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-
-    }
-
+function append(x) {
+    document.getElementById("myinput").innerHTML = x;
 }
 
-function w3AddClass(element, name) {
-
-    var i, arr1, arr2;
-
-    arr1 = element.className.split(" ");
-
-    arr2 = name.split(" ");
-
-    for (i = 0; i < arr2.length; i++) {
-
-        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
-
-    }
-
+function append1(x1) {
+    document.getElementById("myinput").innerHTML = x1;
 }
 
-function w3RemoveClass(element, name) {
-
-    var i, arr1, arr2;
-
-    arr1 = element.className.split(" ");
-
-    arr2 = name.split(" ");
-
-    for (i = 0; i < arr2.length; i++) {
-
-        while (arr1.indexOf(arr2[i]) > -1) {
-
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
-
-        }
-
-    }
-
-    element.className = arr1.join(" ");
-
-}
-
-// Add active class to the current button (highlight it)
-
-var btnContainer = document.getElementById("myBtnContainer");
-
-var btns = btnContainer.getElementsByClassName("btn");
-
-for (var i = 0; i < btns.length; i++) {
-
-    btns[i].addEventListener("click", function() {
-
-        var current = document.getElementsByClassName("active");
-
-        current[0].className = current[0].className.replace(" active", "");
-
-        this.className += " active";
-
-    });
+function append2(x2) {
+    document.getElementById("myinput").innerHTML = x2;
 
 }
