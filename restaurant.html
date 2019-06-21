@@ -224,20 +224,52 @@
                     </tfoot>
                 </table>
             </div>
+            <div class="col-md-4 hide drop" id="jipe">
+                <button type="button" class="btn btn-danger btns" data-toggle="modal" data-target="#myModal"
+                    onclick="generateQR()">Get QR Bill</button>
+            </div>
         </div>
     </div>
 
-    <!--- QR code section --->
-    <br>
-    <br>
-    <br>
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
 
-    <div class="qr">
-        <input id="myinput" placeholder="Type something">
-        <button onclick="generateQR()">Generate!</button>
-        <div id="qrcode"></div>
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h2>Present this to get served</h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div  class="hide" id="myinput">
+
+                    </div>
+                    <div id="qrcode"></div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col">
+                            <div class="btn-left">
+                                <button class="btn btn-primary btns">Save</button>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="btn-right">
+                                <button type="button" class="btn btn-danger btns" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
+    <br><br><br>
 </body>
 
 </html>
