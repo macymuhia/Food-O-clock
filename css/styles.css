@@ -177,3 +177,58 @@ form{
 .hide{
     display: none;
 }
+
+/* This is the footer section */
+fa {
+   width: 50px;
+   text-align: center;
+   text-decoration: none;
+   margin: 5px 2px;
+}
+
+.fa:hover {
+   color: purple;
+}
+
+.fa-facebook,
+.fa-youtube,
+.fa-instagram,
+.fa-twitter,
+.fa-google {
+   color: white;
+   padding: 5px;
+}
+
+.contact .nav {
+   margin: 5px 50px;
+   justify-content: center;
+}
+
+.contact a {
+   color: white;
+}
+
+.contact {
+   width: 100%;
+   background: black;
+   color: white;
+   padding: 20px 150px;
+}
+
+.contact h1 {
+   text-align: center;
+   padding-bottom: 50px;
+}
+
+.specific {
+   margin-bottom: 4%;
+}
+#message-alert {
+   display: none;
+}
+
+.alert {
+   width: fit-content;
+   margin: auto;
+ }
+/* Ends the footer section */
