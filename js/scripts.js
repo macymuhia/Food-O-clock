@@ -1,92 +1,137 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
     //Preloader
-    $(window).on("load", function () {
+
+    $(window).on("load", function() {
+
         preloaderFadeOutTime = 2000;
 
         function hidePreloader() {
+
             var preloader = $('.preloader');
+
             preloader.fadeOut(preloaderFadeOutTime);
+
         }
+
         hidePreloader();
-    });
+
 
     // This will style the form we currently have
 
     function food(name, price, total) {
+
         this.name = name;
+
         this.price = price;
+
         this.total = total;
+
     }
 
-    $("#show14").click(function () {
+    $("#show14").click(function() {
+
         $("#show24").hide();
+
         $("#show34").hide();
+
         $(".2").hide();
+
         $(".3").hide();
+
         $(".4").hide();
-        $(".1").animate({
-            left: 200,
-            opacity: "show"
-        }, 1500);
+
+
+        $(".1").animate({ left: 200, opacity: "show" }, 1500);
+
     })
 
-    $("#show24").click(function () {
+    $("#show24").click(function() {
+
         $("#show34").hide();
+
         $("#show14").hide();
+
         $(".1").hide();
+
         $(".3").hide();
+
         $(".4").hide();
-        $(".2").animate({
-            left: 200,
-            opacity: "show"
-        }, 1500);
+
+
+        $(".2").animate({ left: 200, opacity: "show" }, 1500);
+
     })
 
-    $("#show34").click(function () {
+    $("#show34").click(function() {
+
         $("#show24").hide();
+
         $("#show14").hide();
+
         $(".1").hide();
+
         $(".2").hide();
+
         $(".4").hide();
-        $(".3").animate({
-            left: 200,
-            opacity: "show"
-        }, 1500);
+
+
+        $(".3").animate({ left: 200, opacity: "show" }, 1500);
+
     })
 
-    $("#press").click(function () {
-        $(".4").animate({
-            left: 200,
-            opacity: "show"
-        }, 1500);
+    $("#press").click(function() {
+
+        $(".4").animate({ left: 200, opacity: "show" }, 1500);
+
         var fName = $("#food option:selected").text();
+
         var fPrice = $("#food option:selected").val();
+
         var fPlate = $("#plate option:selected").val();
+
         var fTotal = fPlate * fPrice;
+
         var newFood = new food(fName, fPrice, fTotal);
+
         var bumaye = '<tr> <td id = "fooda">' + newFood.name + '</td>' + '<td id = "price">' + newFood.price + '</td>' + '<td id = "total">' + newFood.total + '</td></tr>'
+
         $("table tbody").append(bumaye);
+
 
         $("#pressed").last().click(function () {
             $("#jipe").show();
             $('table thead th').each(function (i) {
+
                 calculateColumn(i);
+
             });
 
             function calculateColumn(index) {
+
                 var total = 0;
-                $('table tr').each(function () {
+
+                $('table tr').each(function() {
+
                     var value = parseInt($('td', this).eq(index).text());
+
                     if (!isNaN(value)) {
+
                         total += value;
+
                     }
+
                 });
+
                 $('table tfoot td').eq(index).text('Total:' + total);
+
                 var you = "Your total value is " + total + "."; 
                 append(you);
+
             }
+
         })
+
     })
 
     $("#press1").click(function () {
@@ -173,4 +218,5 @@ function append1(x1) {
 
 function append2(x2) {
     document.getElementById("myinput").innerHTML = x2;
+
 }
