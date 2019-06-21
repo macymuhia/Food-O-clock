@@ -11,9 +11,14 @@ $(document).ready(function () {
         hidePreloader();
     });
 
+//QRcode section
+function generateQR() {
+    var myinput = $ ("#myinput").val();
+    new QRCode(document.getElementById("qrcode"), myinput);
+}
+
 
     // This will style the form we currently have
-
 
     function food(name, price, total) {
         this.name = name;
@@ -131,5 +136,4 @@ $("#press2").click(function () {
         }
     })
 });
-
 });
