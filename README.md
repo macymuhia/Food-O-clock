@@ -1,27 +1,33 @@
-#  Food O'clock [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-The *Food O'clock* is an application that makes it possible for people to order food online.
+# Food O'clock
+![Portfolio Webpage Screenshot](./images/Selection_003.png)
+#### Check out Food O'clock [here](https://macymuhia.github.io/Food-O-clock/)
 
-```features
-## Features
-- Customers can browse the menu,
-- Customers acn  add/remove items to cart, 
-- Customers can make payment after delivery.
-- Customers can change the delivery address.
-- Friendly to user.
-```
-For screenshots [click here](https://raw.githubusercontent.com/macymuhia/Food-O-clock/develop/images/all/0.jpg)
+Last modified 21st June 2019.
+#### By **Mercy Muhia**, **Jenniffer Nyawira**, **Melisa Juma**, **Oliver Muriithi** and **Rahma Osman**
+## Description
+Food O'clock is a web Application that gives a user ability to:
+* order food online for either delivery or take-away
+* reserve a table in case they want to dine in
+## Project Behaviour
+* A user can view all restaurants that have signed up with Food O’clock
+* A user can view restaurants in category of choice
+* A user can select restaurant and order a meal plus reserve a table
+* A user can get total cost and get a QR code for their order to act as their bill
 
-![login]()
-![menupage]()
+ 
+## Setup/Installation Requirements
+* Git clone https://github.com/macymuhia/Food-O-clock.git
+* cd Food O'clock
+* open index.html file on your preferred browser
+## Technologies Used
+HTML, CSS (Bootstrap) and Javascript(JQUERY)
+## Support and contact details
+To contribute, submit a pull request. 
+For questions or concerns, reach out on foodoclock@gmail.com
+### License
+*MIT*
 
-## Technologies
-- [Javascript](JQuery)(https://javascript.info/js) - widely used object-oriented language, the core of our system
-- [HTML](bootstrap)(https://en.wikipedia.org/wiki/HTML) - Markup language.
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) -Cascading style sheet 
+### &copy; 2019 Food O'clock
 
-## Set Up Instructions For Running Application
-1. Google the project of the application and open it.
-2. Enter your server p(**Host Name, Port Number, Admin UserName/Password**).
 
-*Note The [Food O'clock] website is 
 
