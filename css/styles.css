@@ -106,7 +106,9 @@
     text-align: center;
 }
 
+
 /* styling of bakground image section in restauran.html*/
+
 .box {
     position: relative;
     display: inline-block;
@@ -141,7 +143,9 @@
     font-size: 400%;
 }
 
+
 /* styling of form section */
+
 .drop {
     margin: auto;
     width: 65%;
@@ -166,28 +170,33 @@
     margin-top: 5%;
 }
 
+
 /****** QRcode Styling *****************/
-.qr{
+
+.qr {
     text-align: center;
 }
-form{
+
+form {
     width: 100%;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
+
 /* This is the footer section */
+
 fa {
-   width: 50px;
-   text-align: center;
-   text-decoration: none;
-   margin: 5px 2px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
 }
 
 .fa:hover {
-   color: purple;
+    color: purple;
 }
 
 .fa-facebook,
@@ -195,40 +204,166 @@ fa {
 .fa-instagram,
 .fa-twitter,
 .fa-google {
-   color: white;
-   padding: 5px;
+    color: white;
+    padding: 5px;
 }
 
 .contact .nav {
-   margin: 5px 50px;
-   justify-content: center;
+    margin: 5px 50px;
+    justify-content: center;
 }
 
 .contact a {
-   color: white;
+    color: white;
 }
 
 .contact {
-   width: 100%;
-   background: black;
-   color: white;
-   padding: 20px 150px;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 20px 150px;
 }
 
 .contact h1 {
-   text-align: center;
-   padding-bottom: 50px;
+    text-align: center;
+    padding-bottom: 50px;
 }
 
 .specific {
-   margin-bottom: 4%;
+    margin-bottom: 4%;
 }
+
 #message-alert {
-   display: none;
+    display: none;
 }
 
 .alert {
-   width: fit-content;
-   margin: auto;
- }
+    width: fit-content;
+    margin: auto;
+}
+
+
 /* Ends the footer section */
+
+
+/* filters section */
+
+.align {
+    text-align: center;
+}
+
+.jumbotron {
+    background: none;
+}
+
+#myBtnContainer {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+    color: black;
+}
+
+.row {
+    margin: 10px -16px;
+}
+
+
+/* / Add padding BETWEEN each column /  */
+
+.row,
+.row>.column {
+    padding: 8px;
+}
+
+
+/* / Create three equal columns that floats next to each other /  */
+
+.column {
+    float: left;
+    width: 33.33%;
+    display: none;
+    /* / Hide all elements by default / */
+}
+
+
+/* / Clear floats after rows /  */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* / Content /  */
+
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+
+/* / The "show" class is added to the filtered elements /  */
+
+.show {
+    display: block;
+}
+
+
+/* / Style the buttons /  */
+
+.containers {
+    position: relative;
+    /*width: 50%;
+    
+    height:100%;*/
+}
+
+.image {
+    display: block;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: transparent;
+    opacity: 0.8px;
+}
+
+.containers:hover {
+    opacity: 0.9;
+}
+
+.containers:hover .overlay {
+    opacity: 1;
+}
+
+.p {
+    color: black;
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
