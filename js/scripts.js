@@ -16,6 +16,7 @@ $(document).ready(function() {
 
         hidePreloader();
 
+    });
 
     // This will style the form we currently have
 
