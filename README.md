@@ -2,8 +2,8 @@
 ![Portfolio Webpage Screenshot](./images/Selection_003.png)
 #### Check out Food O'clock [here](https://macymuhia.github.io/Food-O-clock/)
 
-Last modified 21st June 2019.
-#### By **Mercy Muhia**, **Jenniffer Nyawira**, **Melisa Juma**, **Oliver Muriithi** and **Rahma Osman**
+Last modified 28th June 2022.
+#### By **Mercy Muhia**, **Jenniffer Nyawira**, **Melisa Juma**, **Oliver Muriithi**, **Rahma Osman** and **Joseph Wambura**
 ## Description
 Food O'clock is a web Application that gives a user ability to:
 * order food online for either delivery or take-away
@@ -27,7 +27,7 @@ For questions or concerns, reach out on foodoclock@gmail.com
 ### License
 *MIT*
 
-### &copy; 2019 Food O'clock
+### &copy; 2019 - 2022 Food O'clock
 
 
 
